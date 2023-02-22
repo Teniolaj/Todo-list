@@ -1,0 +1,164 @@
+:root {
+    --dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --light: #EEE;
+    --pink: #ec4899;
+    --purple: #8b5cf6;
+    --gray: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    min-width: 20vw;
+}
+
+header h1 {
+    font-size: 4rem;
+    padding: 5rem 0 2rem 0;
+    color: var(--gray);
+}
+
+form #input-field {
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 20vw;
+    font-size: 1.5rem;
+    color: var(--light);
+    outline: none;
+}
+
+form #submit-task {
+    margin-left: 2rem;
+    color: var(--pink);
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+main {
+    width: auto;
+}
+
+main section h2 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    padding: 3rem 0 2rem 0;
+    color: var(--gray);
+}
+
+main section #tasks .task {
+    background-color: var(--darkest);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+main section #tasks .task .text {
+    border: none;
+    background-color: var(--darkest);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    color: var(--light);
+    outline: none;
+}
+
+main section .action {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+main section #tasks .task .action .edit {
+    margin-left: 2rem;
+    color: var(--pink);
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+main section #tasks .task .action .delete {
+    margin-left: 2rem;
+    color: red;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding-right: 2rem;
+}
+
+@media only screen and (max-width:600px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    #To-Do-List-form {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: .5rem;
+    }
+    form #input-field {
+        width: 60vw;
+        font-size: 1rem;
+    }
+    form #submit-task {
+        margin-left: .5rem;
+        font-size: 1.2rem;
+    }
+    main {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    main section h2 {
+        display: block;
+        font-size: 2rem;
+    }
+    main section #tasks {
+        width: 100vw;
+    }
+    main section #tasks .task {
+        display: flex;
+        justify-content: space-between;
+        width: 10vw;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    main section #tasks #task-content input {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    main section #tasks .task .action .edit {
+        margin-left: .2rem;
+        font-size: 1rem;
+    }
+    main section #tasks .task .action .delete {
+        margin-left: .2rem;
+        font-size: 1rem;
+    }
+}
